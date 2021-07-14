@@ -134,7 +134,7 @@
         <translation>无法捕获屏幕</translation>
     </message>
     <message>
-        <location filename="../../src/widgets/capture/capturewidget.cpp" line="1536"/>
+        <location filename="../../src/widgets/capture/capturewidget.cpp" line="1586"/>
         <source>Select an area with the mouse, or press Esc to exit.
 Press Enter to capture the screen.
 Press Right Click to show the color picker.
@@ -147,7 +147,7 @@ Press Space to open the side panel.</source>
 按下空格键以打开侧边面板。</translation>
     </message>
     <message>
-        <location filename="../../src/widgets/capture/capturewidget.cpp" line="803"/>
+        <location filename="../../src/widgets/capture/capturewidget.cpp" line="851"/>
         <source>Tool Settings</source>
         <translation>工具设置</translation>
     </message>
@@ -155,12 +155,12 @@ Press Space to open the side panel.</source>
 <context>
     <name>CircleCountTool</name>
     <message>
-        <location filename="../../src/tools/circlecount/circlecounttool.cpp" line="26"/>
+        <location filename="../../src/tools/circlecount/circlecounttool.cpp" line="33"/>
         <source>Circle Counter</source>
         <translation>圆圈计数</translation>
     </message>
     <message>
-        <location filename="../../src/tools/circlecount/circlecounttool.cpp" line="36"/>
+        <location filename="../../src/tools/circlecount/circlecounttool.cpp" line="43"/>
         <source>Add an autoincrementing counter bubble</source>
         <translation>添加数字自动递增的计数圆圈</translation>
     </message>
@@ -337,7 +337,7 @@ Press Space to open the side panel.</source>
     <message>
         <location filename="../../src/config/filenameeditor.cpp" line="78"/>
         <source>Restore</source>
-        <translation type="unfinished"></translation>
+        <translation>恢复</translation>
     </message>
     <message>
         <source>Reset</source>
@@ -637,7 +637,7 @@ Press Space to open the side panel.</source>
     <message>
         <location filename="../../src/config/generalconf.cpp" line="410"/>
         <source>Latest Uploads Max Size</source>
-        <translation type="unfinished"></translation>
+        <translation>之前的上传最大数量</translation>
     </message>
     <message>
         <location filename="../../src/config/generalconf.cpp" line="443"/>
@@ -967,12 +967,14 @@ Press Space to open the side panel.</source>
 <context>
     <name>QHotkey</name>
     <message>
+        <location filename="../../external/QHotkey/qhotkey.cpp" line="307"/>
         <source>Failed to register %1. Error: %2</source>
-        <translation type="vanished">注册 %1 失败。错误：%2</translation>
+        <translation>注册 %1 失败。错误：%2</translation>
     </message>
     <message>
+        <location filename="../../external/QHotkey/qhotkey.cpp" line="329"/>
         <source>Failed to unregister %1. Error: %2</source>
-        <translation type="vanished">取消注册 %1 失败。错误：%2</translation>
+        <translation>取消注册 %1 失败。错误：%2</translation>
     </message>
 </context>
 <context>
@@ -1018,12 +1020,12 @@ Press Space to open the side panel.</source>
     <message>
         <location filename="../../src/utils/screenshotsaver.cpp" line="172"/>
         <source>Saving canceled</source>
-        <translation type="unfinished"></translation>
+        <translation>已取消保存</translation>
     </message>
     <message>
         <location filename="../../src/utils/screenshotsaver.cpp" line="174"/>
         <source>Save canceled</source>
-        <translation type="unfinished"></translation>
+        <translation>已取消保存</translation>
     </message>
     <message>
         <location filename="../../src/utils/screenshotsaver.cpp" line="196"/>
@@ -1294,7 +1296,7 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</source>
         <location filename="../../src/utils/configshortcuts.cpp" line="66"/>
         <location filename="../../src/utils/configshortcuts.cpp" line="70"/>
         <source>Delete current tool</source>
-        <translation type="unfinished"></translation>
+        <translation>删除当前工具</translation>
     </message>
     <message>
         <location filename="../../src/utils/configshortcuts.cpp" line="74"/>
@@ -1327,12 +1329,12 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</source>
 <context>
     <name>RectangleTool</name>
     <message>
-        <location filename="../../src/tools/rectangle/rectangletool.cpp" line="24"/>
+        <location filename="../../src/tools/rectangle/rectangletool.cpp" line="26"/>
         <source>Rectangle</source>
         <translation>实心矩形</translation>
     </message>
     <message>
-        <location filename="../../src/tools/rectangle/rectangletool.cpp" line="34"/>
+        <location filename="../../src/tools/rectangle/rectangletool.cpp" line="36"/>
         <source>Set the Rectangle as the paint tool</source>
         <translation>将实心矩形设置为绘画工具</translation>
     </message>
@@ -1399,7 +1401,7 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</source>
     <message>
         <location filename="../../src/config/setshortcutwidget.cpp" line="35"/>
         <source>Press Esc to cancel or ⌘+Backspace to disable the keyboard shortcut.</source>
-        <translation type="unfinished"></translation>
+        <translation>按下 Esc 键以取消，或使用 ⌘+Backspace 来禁用键盘快捷键。</translation>
     </message>
     <message>
         <location filename="../../src/config/setshortcutwidget.cpp" line="39"/>
@@ -1458,12 +1460,12 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</source>
     <message>
         <location filename="../../src/tools/sizedecrease/sizedecreasetool.cpp" line="37"/>
         <source>Decrease Tool Size</source>
-        <translation type="unfinished"></translation>
+        <translation>减小工具尺寸</translation>
     </message>
     <message>
         <location filename="../../src/tools/sizedecrease/sizedecreasetool.cpp" line="47"/>
         <source>Decrease the size of the other tools</source>
-        <translation type="unfinished"></translation>
+        <translation>减小其它工具的尺寸</translation>
     </message>
 </context>
 <context>
@@ -1471,12 +1473,12 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</source>
     <message>
         <location filename="../../src/tools/sizeincrease/sizeincreasetool.cpp" line="37"/>
         <source>Increase Tool Size</source>
-        <translation type="unfinished"></translation>
+        <translation>增大工具尺寸</translation>
     </message>
     <message>
         <location filename="../../src/tools/sizeincrease/sizeincreasetool.cpp" line="47"/>
         <source>Increase the size of the other tools</source>
-        <translation type="unfinished"></translation>
+        <translation>增大其它工具的尺寸</translation>
     </message>
 </context>
 <context>
@@ -1611,22 +1613,22 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</source>
 <context>
     <name>TextConfig</name>
     <message>
-        <location filename="../../src/tools/text/textconfig.cpp" line="40"/>
+        <location filename="../../src/tools/text/textconfig.cpp" line="45"/>
         <source>StrikeOut</source>
         <translation>删除线</translation>
     </message>
     <message>
-        <location filename="../../src/tools/text/textconfig.cpp" line="49"/>
+        <location filename="../../src/tools/text/textconfig.cpp" line="54"/>
         <source>Underline</source>
         <translation>下划线</translation>
     </message>
     <message>
-        <location filename="../../src/tools/text/textconfig.cpp" line="58"/>
+        <location filename="../../src/tools/text/textconfig.cpp" line="63"/>
         <source>Bold</source>
         <translation>粗体</translation>
     </message>
     <message>
-        <location filename="../../src/tools/text/textconfig.cpp" line="67"/>
+        <location filename="../../src/tools/text/textconfig.cpp" line="72"/>
         <source>Italic</source>
         <translation>斜体</translation>
     </message>
@@ -1634,12 +1636,12 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</source>
 <context>
     <name>TextTool</name>
     <message>
-        <location filename="../../src/tools/text/texttool.cpp" line="59"/>
+        <location filename="../../src/tools/text/texttool.cpp" line="60"/>
         <source>Text</source>
         <translation>文本</translation>
     </message>
     <message>
-        <location filename="../../src/tools/text/texttool.cpp" line="69"/>
+        <location filename="../../src/tools/text/texttool.cpp" line="84"/>
         <source>Add text to your capture</source>
         <translation>在您的捕获中添加文本</translation>
     </message>
@@ -1721,14 +1723,14 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</source>
 <context>
     <name>UtilityPanel</name>
     <message>
-        <location filename="../../src/widgets/panel/utilitypanel.cpp" line="157"/>
+        <location filename="../../src/widgets/panel/utilitypanel.cpp" line="159"/>
         <source>Close</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="../../src/widgets/panel/utilitypanel.cpp" line="167"/>
+        <location filename="../../src/widgets/panel/utilitypanel.cpp" line="169"/>
         <source>&lt;Empty&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;空&gt;</translation>
     </message>
 </context>
 <context>

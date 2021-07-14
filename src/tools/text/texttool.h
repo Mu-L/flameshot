@@ -25,6 +25,7 @@ public:
     QIcon icon(const QColor& background, bool inEditor) const override;
     QString name() const override;
     QString description() const override;
+    QString info() override;
 
     QWidget* widget() override;
     QWidget* configurationWidget() override;
@@ -36,6 +37,9 @@ public:
     void move(const QPoint& pos) override;
     const QPoint* pos() override;
     void drawObjectSelection(QPainter& painter) override;
+
+    void setEditMode(bool b) override;
+    bool isChanged() override;
 
 protected:
     void copyParams(const TextTool* from, TextTool* to);
@@ -63,10 +67,13 @@ private:
 
     QFont m_font;
     QString m_text;
+    QString m_textOld;
     int m_size;
     QColor m_color;
     QRect m_textArea;
     QPointer<TextWidget> m_widget;
     QPointer<TextConfig> m_confW;
     QPoint m_currentPos;
+
+    QString m_tempString;
 };

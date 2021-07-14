@@ -6,7 +6,7 @@
     <message>
         <location filename="../../src/tools/launcher/applaunchertool.cpp" line="23"/>
         <source>App Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Avvia App</translation>
     </message>
     <message>
         <location filename="../../src/tools/launcher/applaunchertool.cpp" line="33"/>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../../src/tools/launcher/applauncherwidget.cpp" line="42"/>
         <source>Open With</source>
-        <translation>Apri Con</translation>
+        <translation>Apri con</translation>
     </message>
     <message>
         <location filename="../../src/tools/launcher/applauncherwidget.cpp" line="57"/>
@@ -122,7 +122,7 @@
         <translation>Impossibile acquisire lo schermo</translation>
     </message>
     <message>
-        <location filename="../../src/widgets/capture/capturewidget.cpp" line="1536"/>
+        <location filename="../../src/widgets/capture/capturewidget.cpp" line="1586"/>
         <source>Select an area with the mouse, or press Esc to exit.
 Press Enter to capture the screen.
 Press Right Click to show the color picker.
@@ -135,7 +135,7 @@ Usa la rotellina del mouse per modificare lo spessore del tuo strumento.
 Premi la barra spaziatrice per aprire il pannello laterale.</translation>
     </message>
     <message>
-        <location filename="../../src/widgets/capture/capturewidget.cpp" line="803"/>
+        <location filename="../../src/widgets/capture/capturewidget.cpp" line="851"/>
         <source>Tool Settings</source>
         <translation>Impostazioni Strumento</translation>
     </message>
@@ -143,12 +143,12 @@ Premi la barra spaziatrice per aprire il pannello laterale.</translation>
 <context>
     <name>CircleCountTool</name>
     <message>
-        <location filename="../../src/tools/circlecount/circlecounttool.cpp" line="26"/>
+        <location filename="../../src/tools/circlecount/circlecounttool.cpp" line="33"/>
         <source>Circle Counter</source>
         <translation>Contatore circolare</translation>
     </message>
     <message>
-        <location filename="../../src/tools/circlecount/circlecounttool.cpp" line="36"/>
+        <location filename="../../src/tools/circlecount/circlecounttool.cpp" line="43"/>
         <source>Add an autoincrementing counter bubble</source>
         <translation>Aggiungi un contatore a bolla autoincrementante</translation>
     </message>
@@ -254,7 +254,7 @@ Premi la barra spaziatrice per aprire il pannello laterale.</translation>
     <message>
         <location filename="../../src/core/controller.cpp" line="433"/>
         <source>&amp;Latest Uploads</source>
-        <translation>&amp;Ultimi Uploads</translation>
+        <translation>&amp;Ultimi caricamenti</translation>
     </message>
 </context>
 <context>
@@ -321,7 +321,7 @@ Premi la barra spaziatrice per aprire il pannello laterale.</translation>
     <message>
         <location filename="../../src/config/filenameeditor.cpp" line="78"/>
         <source>Restore</source>
-        <translation type="unfinished"></translation>
+        <translation>Ripristina</translation>
     </message>
     <message>
         <source>Reset</source>
@@ -373,7 +373,7 @@ Premi la barra spaziatrice per aprire il pannello laterale.</translation>
     <message>
         <location filename="../../src/config/generalconf.cpp" line="132"/>
         <source>Save File</source>
-        <translation>Salva File</translation>
+        <translation>Salva il file</translation>
     </message>
     <message>
         <location filename="../../src/config/generalconf.cpp" line="154"/>
@@ -383,7 +383,7 @@ Premi la barra spaziatrice per aprire il pannello laterale.</translation>
     <message>
         <location filename="../../src/config/generalconf.cpp" line="155"/>
         <source>Are you sure you want to reset the configuration?</source>
-        <translation>Sei sicuro di voler ripristinare la configurazione?</translation>
+        <translation>Sei sicuro/a di voler ripristinare la configurazione?</translation>
     </message>
     <message>
         <location filename="../../src/config/generalconf.cpp" line="190"/>
@@ -502,7 +502,7 @@ Premi la barra spaziatrice per aprire il pannello laterale.</translation>
     <message>
         <location filename="../../src/config/generalconf.cpp" line="410"/>
         <source>Latest Uploads Max Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione Massima Ultimi Caricamenti</translation>
     </message>
     <message>
         <location filename="../../src/config/generalconf.cpp" line="443"/>
@@ -768,12 +768,14 @@ Premi la barra spaziatrice per aprire il pannello laterale.</translation>
 <context>
     <name>QHotkey</name>
     <message>
+        <location filename="../../external/QHotkey/qhotkey.cpp" line="307"/>
         <source>Failed to register %1. Error: %2</source>
-        <translation type="vanished">Impossibile registrare %1. Errore: %2</translation>
+        <translation>Impossibile registrare %1. Errore: %2</translation>
     </message>
     <message>
+        <location filename="../../external/QHotkey/qhotkey.cpp" line="329"/>
         <source>Failed to unregister %1. Error: %2</source>
-        <translation type="vanished">Impossibile annullare la registrazione di %1. Errore: %2</translation>
+        <translation>Impossibile annullare la registrazione di %1. Errore: %2</translation>
     </message>
 </context>
 <context>
@@ -1010,12 +1012,12 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</translati
     <message>
         <location filename="../../src/utils/screenshotsaver.cpp" line="172"/>
         <source>Saving canceled</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvataggio annullato</translation>
     </message>
     <message>
         <location filename="../../src/utils/screenshotsaver.cpp" line="174"/>
         <source>Save canceled</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvataggio annullato</translation>
     </message>
     <message>
         <location filename="../../src/utils/screenshotsaver.cpp" line="196"/>
@@ -1085,13 +1087,13 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</translati
     <message>
         <location filename="../../src/utils/configshortcuts.cpp" line="60"/>
         <source>Commit text in text area</source>
-        <translation type="unfinished"></translation>
+        <translation>Conferma testo nell&apos;area testo</translation>
     </message>
     <message>
         <location filename="../../src/utils/configshortcuts.cpp" line="66"/>
         <location filename="../../src/utils/configshortcuts.cpp" line="70"/>
         <source>Delete current tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina lo strumento corrente</translation>
     </message>
     <message>
         <location filename="../../src/utils/configshortcuts.cpp" line="74"/>
@@ -1124,12 +1126,12 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</translati
 <context>
     <name>RectangleTool</name>
     <message>
-        <location filename="../../src/tools/rectangle/rectangletool.cpp" line="24"/>
+        <location filename="../../src/tools/rectangle/rectangletool.cpp" line="26"/>
         <source>Rectangle</source>
         <translation>Rettangolo</translation>
     </message>
     <message>
-        <location filename="../../src/tools/rectangle/rectangletool.cpp" line="34"/>
+        <location filename="../../src/tools/rectangle/rectangletool.cpp" line="36"/>
         <source>Set the Rectangle as the paint tool</source>
         <translation>Imposta il rettangolo come strumento di disegno</translation>
     </message>
@@ -1196,7 +1198,7 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</translati
     <message>
         <location filename="../../src/config/setshortcutwidget.cpp" line="35"/>
         <source>Press Esc to cancel or ⌘+Backspace to disable the keyboard shortcut.</source>
-        <translation type="unfinished"></translation>
+        <translation>Premere Esc per annullare o ⌘+Backspace per disabilitare la scorciatoia da tastiera.</translation>
     </message>
     <message>
         <location filename="../../src/config/setshortcutwidget.cpp" line="39"/>
@@ -1255,12 +1257,12 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</translati
     <message>
         <location filename="../../src/tools/sizedecrease/sizedecreasetool.cpp" line="37"/>
         <source>Decrease Tool Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Diminuisci le Dimensioni dello Strumento</translation>
     </message>
     <message>
         <location filename="../../src/tools/sizedecrease/sizedecreasetool.cpp" line="47"/>
         <source>Decrease the size of the other tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Diminuisci le dimensioni degli altri strumenti</translation>
     </message>
 </context>
 <context>
@@ -1268,12 +1270,12 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</translati
     <message>
         <location filename="../../src/tools/sizeincrease/sizeincreasetool.cpp" line="37"/>
         <source>Increase Tool Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Aumenta la dimensione dello strumento</translation>
     </message>
     <message>
         <location filename="../../src/tools/sizeincrease/sizeincreasetool.cpp" line="47"/>
         <source>Increase the size of the other tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Aumenta le dimensioni degli altri strumenti</translation>
     </message>
 </context>
 <context>
@@ -1408,22 +1410,22 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</translati
 <context>
     <name>TextConfig</name>
     <message>
-        <location filename="../../src/tools/text/textconfig.cpp" line="40"/>
+        <location filename="../../src/tools/text/textconfig.cpp" line="45"/>
         <source>StrikeOut</source>
         <translation>Cancella</translation>
     </message>
     <message>
-        <location filename="../../src/tools/text/textconfig.cpp" line="49"/>
+        <location filename="../../src/tools/text/textconfig.cpp" line="54"/>
         <source>Underline</source>
         <translation>Sottolineare</translation>
     </message>
     <message>
-        <location filename="../../src/tools/text/textconfig.cpp" line="58"/>
+        <location filename="../../src/tools/text/textconfig.cpp" line="63"/>
         <source>Bold</source>
         <translation>Grassetto</translation>
     </message>
     <message>
-        <location filename="../../src/tools/text/textconfig.cpp" line="67"/>
+        <location filename="../../src/tools/text/textconfig.cpp" line="72"/>
         <source>Italic</source>
         <translation>Corsivo</translation>
     </message>
@@ -1431,12 +1433,12 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</translati
 <context>
     <name>TextTool</name>
     <message>
-        <location filename="../../src/tools/text/texttool.cpp" line="59"/>
+        <location filename="../../src/tools/text/texttool.cpp" line="60"/>
         <source>Text</source>
         <translation>Testo</translation>
     </message>
     <message>
-        <location filename="../../src/tools/text/texttool.cpp" line="69"/>
+        <location filename="../../src/tools/text/texttool.cpp" line="84"/>
         <source>Add text to your capture</source>
         <translation>Aggiungi testo alla tua cattura</translation>
     </message>
@@ -1518,14 +1520,14 @@ You may need to escape the &apos;#&apos; sign as in &apos;\#FFF&apos;</translati
 <context>
     <name>UtilityPanel</name>
     <message>
-        <location filename="../../src/widgets/panel/utilitypanel.cpp" line="157"/>
+        <location filename="../../src/widgets/panel/utilitypanel.cpp" line="159"/>
         <source>Close</source>
         <translation>Chiudi</translation>
     </message>
     <message>
-        <location filename="../../src/widgets/panel/utilitypanel.cpp" line="167"/>
+        <location filename="../../src/widgets/panel/utilitypanel.cpp" line="169"/>
         <source>&lt;Empty&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;Vuoto&gt;</translation>
     </message>
 </context>
 <context>

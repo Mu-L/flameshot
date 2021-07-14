@@ -18,7 +18,6 @@
 #include "src/tools/capturetool.h"
 #include "src/utils/confighandler.h"
 #include "src/widgets/capture/selectionwidget.h"
-#include "src/widgets/panel/utilitypanel.h"
 #include <QPointer>
 #include <QUndoStack>
 #include <QWidget>
@@ -32,6 +31,8 @@ class ColorPicker;
 class NotifierBox;
 class HoverEventFilter;
 class UpdateNotificationWidget;
+class UtilityPanel;
+class SidePanelWidget;
 
 class CaptureWidget : public QWidget
 {
@@ -99,6 +100,7 @@ protected:
     void mousePressEvent(QMouseEvent* mouseEvent) override;
     void mouseMoveEvent(QMouseEvent* mouseEvent) override;
     void mouseReleaseEvent(QMouseEvent* mouseEvent) override;
+    void mouseDoubleClickEvent(QMouseEvent* event) override;
     void keyPressEvent(QKeyEvent* keyEvent) override;
     void keyReleaseEvent(QKeyEvent* keyEvent) override;
     void wheelEvent(QWheelEvent* wheelEvent) override;
@@ -106,8 +108,11 @@ protected:
     void moveEvent(QMoveEvent* moveEvent) override;
 
 private:
+    void loadDrawThickness();
+    void pushObjectsStateToUndoStack();
+    void releaseActiveTool();
     void uncheckActiveTool();
-    void selectToolItemAtPos(const QPoint& pos);
+    int selectToolItemAtPos(const QPoint& pos);
     void showColorPicker(const QPoint& pos);
     bool startDrawObjectTool(const QPoint& pos);
     QPointer<CaptureTool> activeToolObject();
@@ -166,6 +171,7 @@ private:
 
     ButtonHandler* m_buttonHandler;
     UtilityPanel* m_panel;
+    SidePanelWidget* m_sidePanel;
     ColorPicker* m_colorPicker;
     ConfigHandler m_config;
     NotifierBox* m_notifierBox;
@@ -177,13 +183,16 @@ private:
     uint m_id;
 
     CaptureToolObjects m_captureToolObjects;
+    CaptureToolObjects m_captureToolObjectsBackup;
 
     QPoint m_mousePressedPos;
     QPoint m_activeToolOffsetToMouseOnStart;
 
     QUndoStack m_undoStack;
 
-    // TODO - should be remove after fixing undo()/redo() functions
-    bool m_lastPressedUndo;
-    bool m_lastPressedRedo;
+    bool m_existingObjectIsChanged;
+
+    // For start moving after more than X offset
+    QPoint m_startMovePos;
+    bool m_startMove;
 };

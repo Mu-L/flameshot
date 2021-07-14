@@ -186,6 +186,20 @@ void ConfigHandler::setDrawColor(const QColor& c)
     m_settings.setValue(QStringLiteral("drawColor"), c.name());
 }
 
+void ConfigHandler::setFontFamily(const QString& fontFamily)
+{
+    m_settings.setValue(QStringLiteral("fontFamily"), fontFamily);
+}
+
+const QString& ConfigHandler::fontFamily()
+{
+    m_strRes.clear();
+    if (m_settings.contains(QStringLiteral("fontFamily"))) {
+        m_strRes = m_settings.value(QStringLiteral("fontFamily")).toString();
+    }
+    return m_strRes;
+}
+
 bool ConfigHandler::showHelpValue()
 {
     bool res = true;
@@ -220,6 +234,21 @@ void ConfigHandler::setIgnoreUpdateToVersion(const QString& text)
 QString ConfigHandler::ignoreUpdateToVersion()
 {
     return m_settings.value(QStringLiteral("ignoreUpdateToVersion")).toString();
+}
+
+void ConfigHandler::setUndoLimit(int value)
+{
+    m_settings.setValue(QStringLiteral("undoLimit"), value);
+}
+
+int ConfigHandler::undoLimit()
+{
+    int limit = 100;
+    if (m_settings.contains(QStringLiteral("undoLimit"))) {
+        limit = m_settings.value(QStringLiteral("undoLimit")).toInt();
+        limit = qBound(1, limit, 999);
+    }
+    return limit;
 }
 
 bool ConfigHandler::desktopNotificationValue()
@@ -274,7 +303,7 @@ void ConfigHandler::setDisabledTrayIcon(const bool disabledTrayIcon)
 
 int ConfigHandler::drawThicknessValue()
 {
-    int res = 0;
+    int res = 3;
     if (m_settings.contains(QStringLiteral("drawThickness"))) {
         res = m_settings.value(QStringLiteral("drawThickness")).toInt();
     }
@@ -284,6 +313,20 @@ int ConfigHandler::drawThicknessValue()
 void ConfigHandler::setDrawThickness(const int thickness)
 {
     m_settings.setValue(QStringLiteral("drawThickness"), thickness);
+}
+
+int ConfigHandler::drawFontSizeValue()
+{
+    int res = 8;
+    if (m_settings.contains(QStringLiteral("drawFontSize"))) {
+        res = m_settings.value(QStringLiteral("drawFontSize")).toInt();
+    }
+    return res;
+}
+
+void ConfigHandler::setDrawFontSize(const int fontSize)
+{
+    m_settings.setValue(QStringLiteral("drawFontSize"), fontSize);
 }
 
 bool ConfigHandler::keepOpenAppLauncherValue()

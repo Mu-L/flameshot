@@ -6,10 +6,6 @@
 #include <QPainterPath>
 #include <cmath>
 
-namespace {
-#define PADDING_VALUE 2
-}
-
 RectangleTool::RectangleTool(QObject* parent)
   : AbstractTwoPointTool(parent)
 {
@@ -54,7 +50,6 @@ void RectangleTool::process(QPainter& painter, const QPixmap& pixmap)
     if (thickness() == 0) {
         painter.drawRect(QRect(points().first, points().second));
     } else {
-        painter.setRenderHint(QPainter::Antialiasing);
         QPainterPath path;
         int offset =
           thickness() <= 1 ? 1 : static_cast<int>(round(thickness() / 2 + 0.5));

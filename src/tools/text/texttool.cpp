@@ -2,15 +2,22 @@
 // SPDX-FileCopyrightText: 2017-2019 Alejandro Sirgo Rica & Contributors
 
 #include "texttool.h"
+#include "src/utils/confighandler.h"
 #include "textconfig.h"
 #include "textwidget.h"
 
 #define BASE_POINT_SIZE 8
+#define MAX_INFO_LENGTH 24
 
 TextTool::TextTool(QObject* parent)
   : CaptureTool(parent)
   , m_size(1)
-{}
+{
+    QString fontFamily = ConfigHandler().fontFamily();
+    if (!fontFamily.isEmpty()) {
+        m_font.setFamily(ConfigHandler().fontFamily());
+    }
+}
 
 TextTool::~TextTool()
 {
@@ -59,6 +66,20 @@ QString TextTool::name() const
     return tr("Text");
 }
 
+QString TextTool::info()
+{
+    if (m_text.length() > 0) {
+        m_tempString = QString("%1 - %2").arg(name()).arg(m_text.trimmed());
+        m_tempString = m_tempString.split("\n").at(0);
+        if (m_tempString.length() > MAX_INFO_LENGTH) {
+            m_tempString.truncate(MAX_INFO_LENGTH);
+            m_tempString += "…";
+        }
+        return m_tempString;
+    }
+    return name();
+}
+
 ToolType TextTool::nameID() const
 {
     return ToolType::TEXT;
@@ -76,6 +97,8 @@ QWidget* TextTool::widget()
     m_widget->setTextColor(m_color);
     m_font.setPointSize(m_size + BASE_POINT_SIZE);
     m_widget->setFont(m_font);
+    m_widget->setText(m_text);
+    m_widget->selectAll();
     connect(m_widget, &TextWidget::textUpdated, this, &TextTool::updateText);
     return m_widget;
 }
@@ -83,11 +106,14 @@ QWidget* TextTool::widget()
 void TextTool::closeEditor()
 {
     if (!m_widget.isNull()) {
-        disconnect(
-          m_widget, &TextWidget::textUpdated, this, &TextTool::updateText);
         m_widget->close();
         delete m_widget;
         m_widget = nullptr;
+    }
+    if (!m_confW.isNull()) {
+        m_confW->close();
+        delete m_confW;
+        m_confW = nullptr;
     }
 }
 
@@ -112,6 +138,7 @@ QWidget* TextTool::configurationWidget()
             &TextConfig::fontWeightChanged,
             this,
             &TextTool::updateFontWeight);
+    m_confW->setFontFamily(m_font.family());
     m_confW->setItalic(m_font.italic());
     m_confW->setUnderline(m_font.underline());
     m_confW->setStrikeOut(m_font.strikeOut());
@@ -153,6 +180,8 @@ void TextTool::process(QPainter& painter, const QPixmap& pixmap)
         return;
     }
     const int val = 5;
+    QFont orig_font = painter.font();
+    QPen orig_pen = painter.pen();
     QFontMetrics fm(m_font);
     QSize size(fm.boundingRect(QRect(), 0, m_text).size());
     size.setWidth(size.width() + val * 2);
@@ -161,7 +190,11 @@ void TextTool::process(QPainter& painter, const QPixmap& pixmap)
     // draw text
     painter.setFont(m_font);
     painter.setPen(m_color);
-    painter.drawText(m_textArea + QMargins(-val, -val, val, val), m_text);
+    if (!editMode()) {
+        painter.drawText(m_textArea + QMargins(-val, -val, val, val), m_text);
+    }
+    painter.setFont(orig_font);
+    painter.setPen(orig_pen);
 }
 
 void TextTool::drawObjectSelection(QPainter& painter)
@@ -226,6 +259,9 @@ void TextTool::updateText(const QString& s)
 void TextTool::updateFamily(const QString& s)
 {
     m_font.setFamily(s);
+    if (m_textOld.isEmpty()) {
+        ConfigHandler().setFontFamily(m_font.family());
+    }
     if (m_widget) {
         m_widget->setFont(m_font);
     }
@@ -272,4 +308,17 @@ const QPoint* TextTool::pos()
 {
     m_currentPos = m_textArea.topLeft();
     return &m_currentPos;
+}
+
+void TextTool::setEditMode(bool b)
+{
+    if (b) {
+        m_textOld = m_text;
+    }
+    CaptureTool::setEditMode(b);
+}
+
+bool TextTool::isChanged()
+{
+    return QString::compare(m_text, m_textOld, Qt::CaseInsensitive) != 0;
 }
